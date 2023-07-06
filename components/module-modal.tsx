@@ -10,7 +10,7 @@ interface ModuleModalProps {
   loading: boolean;
   children: React.ReactNode;
   title: string;
-  description: string;
+  description?: string;
 }
 
 export const ModuleModal: React.FC<ModuleModalProps> = ({

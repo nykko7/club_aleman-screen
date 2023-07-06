@@ -5,7 +5,7 @@ import { Eye } from "lucide-react";
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
-export type DirectiveColumn = {
+export type Column = {
   id: string;
   name: string;
   role: string;
@@ -27,7 +27,7 @@ const roles: IRoles = {
   member: "Socio",
 };
 
-export const columns: ColumnDef<DirectiveColumn>[] = [
+export const columns: ColumnDef<Column>[] = [
   {
     accessorKey: "name",
     header: "Nombre",

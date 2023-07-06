@@ -10,7 +10,7 @@ import {
 
 interface ModalProps {
   title: string;
-  description: string;
+  description?: string;
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
@@ -33,8 +33,7 @@ export const Modal: React.FC<ModalProps> = ({
     <Dialog open={isOpen} onOpenChange={onChange}>
       <DialogContent className="bg-almost-white">
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
-          <DialogDescription>{description}</DialogDescription>
+          <DialogTitle className="text-2xl font-semibold tracking-tight">{title}</DialogTitle>
         </DialogHeader>
         <div>{children}</div>
       </DialogContent>
