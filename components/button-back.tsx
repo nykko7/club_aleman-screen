@@ -9,7 +9,7 @@ const ButtonBack = () => {
     <>
       <div className=" space-x-2 flex items-center justify-center w-full">
         <Button
-          className="mt-9"
+          className="mt-9 rounded-[15px]"
           size="lg"
           onClick={() => {
             router.push("/");
