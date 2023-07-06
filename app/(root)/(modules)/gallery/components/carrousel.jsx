@@ -5,7 +5,7 @@ import Image from "next/image";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
+import { EffectCards, Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -23,11 +23,11 @@ export default function Carrousel() {
       <Swiper
         effect={"cards"}
         grabCursor={true}
-        modules={[EffectCards]}
+        modules={[EffectCards, Autoplay]}
         className="mySwiper"
         pagination={true}
         autoplay={{
-          delay: 500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
       >

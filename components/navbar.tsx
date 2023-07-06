@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 import Image from "next/image";
 import Logo from "@/public/assets/logo_german.png";
-import { useRouter } from "next/navigation";
 
 const getCurrentTime = () => {
   const date = new Date();
