@@ -1,9 +1,3 @@
-"use client";
-
-import { useEffect } from "react";
-
-import { useModuleModal } from "@/hooks/use-module-modal";
-
 import ImageGallery from "./components/image-gallery";
 import ModuleList from "./components/modules-list";
 

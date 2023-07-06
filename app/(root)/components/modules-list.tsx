@@ -1,23 +1,28 @@
+"use client";
+
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import Click from "@/public/assets/click.svg";
 import ClickGray from "@/public/assets/click-gray.svg";
+import Link from "next/link";
+import { ModuleModal } from "@/components/module-modal";
 
 const ModuleList: React.FC = () => {
   const router = useRouter();
   return (
     <>
-      <div
+      <Link
         className="cursor-pointer col-span-1 bg-gray flex justify-between	flex-col rounded-[40px] p-[35px]"
-        onClick={() => router.push(`/directives`)}
+        href={`/?module=directives`}
+        as={`/directives`}
       >
         <div className="flex justify-between items-center">
           <p className="text-white text-[18px]">5 DIRECTIVOS</p>
           <Image src={Click} alt="Click" />
         </div>
         <p className="text-[45px] text-white">Directivos</p>
-      </div>
+      </Link>
       <div
         className="cursor-pointer col-span-1 bg-yellow flex justify-between	flex-col rounded-[40px] p-[35px]"
         onClick={() => router.push(`/members`)}

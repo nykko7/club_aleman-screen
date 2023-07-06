@@ -39,7 +39,7 @@ export const ModuleModal: React.FC<ModuleModalProps> = ({
       <div className="space-y-4 py-2 pb-4">
         {children}
         <div className=" space-x-2 flex items-center justify-end w-full">
-          <Button disabled={loading} variant="destructive" onClick={onClose}>
+          <Button disabled={loading} onClick={onClose}>
             Cerrar
           </Button>
         </div>

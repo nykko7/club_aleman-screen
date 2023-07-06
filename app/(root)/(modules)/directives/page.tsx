@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { ModuleModal } from "@/components/module-modal";
@@ -12,6 +12,7 @@ import { _memberList } from "@/data/members";
 
 const DirectivesPage = () => {
   const router = useRouter();
+
   const [openDialog, setOpenDialog] = useState(true);
 
   const title = "Directivos";

@@ -1,10 +1,8 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { Eye } from "lucide-react";
+import CellAction from "./cell-action";
 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
 export type DirectiveColumn = {
   id: string;
   name: string;
@@ -45,15 +43,7 @@ export const columns: ColumnDef<DirectiveColumn>[] = [
     accessorKey: "actions",
     header: "Acciones",
     cell: ({ row }) => {
-      return (
-        <div className="flex justify-center">
-          <Eye
-            size={20}
-            onClick={() => console.log(row)}
-            className="cursor-pointer"
-          ></Eye>
-        </div>
-      );
+      return <CellAction data={row.original} />;
     },
   },
 ];
