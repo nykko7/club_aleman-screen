@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
@@ -8,13 +8,15 @@ const ButtonBack = () => {
   return (
     <>
       <div className=" space-x-2 flex items-center justify-center w-full">
-          <Button
-          className="bg-gray text-white rounded-[10px] hover:bg-black mt-9"
-          variant="destructive"
+        <Button
+          className="mt-9"
           size="lg"
-          onClick={() => {router.push("/")}}>
-            Volver al inicio
-          </Button>
+          onClick={() => {
+            router.push("/");
+          }}
+        >
+          Volver al inicio
+        </Button>
       </div>
     </>
   );

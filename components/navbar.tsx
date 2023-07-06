@@ -29,7 +29,27 @@ const Navbar = () => {
     ampm: "",
   });
 
-  const router = useRouter();
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  // Watch for fullscreenchange
+  useEffect(() => {
+    function onFullscreenChange() {
+      setIsFullscreen(Boolean(document.fullscreenElement));
+    }
+
+    document.addEventListener("fullscreenchange", onFullscreenChange);
+
+    return () =>
+      document.removeEventListener("fullscreenchange", onFullscreenChange);
+  }, []);
+
+  const handleFullScreen = () => {
+    if (isFullscreen) {
+      document.exitFullscreen();
+    } else {
+      document.documentElement.requestFullscreen();
+    }
+  };
 
   // Llamada al método cada segundo
   useEffect(() => {
@@ -42,11 +62,12 @@ const Navbar = () => {
       clearInterval(timer);
     };
   }, []);
+
   return (
     <header className="flex justify-between mb-[50px]">
       <div
         className="flex items-center gap-11 cursor-pointer"
-        onClick={() => router.push("/")}
+        onClick={() => handleFullScreen()}
       >
         <Image src={Logo} alt="Logo Club Alemán" className="w-20" />
         <h1 className="text-2xl">
