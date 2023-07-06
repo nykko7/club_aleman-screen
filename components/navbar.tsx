@@ -50,7 +50,7 @@ const Navbar = () => {
       </div>
       <div className="flex mt-4 gap-2">
         <p className="text-4xl font-medium">{currentTime.time}</p>
-        <p>{currentTime.ampm}</p>
+        <p>HR</p>
       </div>
     </header>
   );

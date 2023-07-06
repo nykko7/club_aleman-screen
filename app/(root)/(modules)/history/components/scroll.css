@@ -1,0 +1,11 @@
+.swiper {
+    width: 50%;
+    height: 500px;
+  }
+  
+  .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+    padding: 30px;
+  }
+  
