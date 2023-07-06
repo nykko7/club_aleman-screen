@@ -13,7 +13,7 @@ import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
 
 export default function Scroll({ children }) {
   return (
-    <>
+    <div className="flex justify-center items-center">
       <Swiper
         direction={"vertical"}
         slidesPerView={"auto"}
@@ -23,7 +23,7 @@ export default function Scroll({ children }) {
         modules={[FreeMode, Scrollbar, Mousewheel]}
         style={{
           width: "50%",
-          height: "500px",
+          height: "60vh",
         }}
       >
         <SwiperSlide
@@ -32,6 +32,6 @@ export default function Scroll({ children }) {
           {children}
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }

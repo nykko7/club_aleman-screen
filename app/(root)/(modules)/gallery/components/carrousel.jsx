@@ -19,7 +19,7 @@ import Image3 from "@/public/assets/image3.jpeg";
 
 export default function Carrousel() {
   return (
-    <>
+    <div className="flex justify-center items-center">
       <Swiper
         effect={"cards"}
         grabCursor={true}
@@ -43,6 +43,6 @@ export default function Carrousel() {
           <Image src={Image3} alt="Imagen 1" />
         </SwiperSlide>
       </Swiper>
-    </>
+    </ div>
   );
 }
