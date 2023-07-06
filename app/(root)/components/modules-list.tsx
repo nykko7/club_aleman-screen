@@ -5,27 +5,55 @@ import { useRouter } from "next/navigation";
 
 import Click from "@/public/assets/click.svg";
 import ClickGray from "@/public/assets/click-gray.svg";
-import Link from "next/link";
-import { ModuleModal } from "@/components/module-modal";
+import { useState } from "react";
+
+import Table from "./table";
+
+const directiveRoles = [
+  "president",
+  "vice_president",
+  "secretary",
+  "treasurer",
+  "board_member",
+  "honor_advisor",
+  "honor_member",
+];
+
+const memberRoles = ["member"];
 
 const ModuleList: React.FC = () => {
+  const [dialog, setDialog] = useState({
+    title: "",
+    open: false,
+    roles: ["member"],
+  });
   const router = useRouter();
+
   return (
     <>
-      <Link
+      <Table
+        title={dialog.title}
+        open={dialog.open}
+        roles={dialog.roles}
+        setOpen={setDialog}
+      />
+      <div
         className="cursor-pointer col-span-1 bg-gray flex justify-between	flex-col rounded-[40px] p-[35px]"
-        href={`/?module=directives`}
-        as={`/directives`}
+        onClick={() => {
+          setDialog({ title: "Directivos", open: true, roles: directiveRoles });
+        }}
       >
         <div className="flex justify-between items-center">
-          <p className="text-white text-[18px]">5 DIRECTIVOS</p>
+          <p className="text-white text-[18px]">12 DIRECTIVOS</p>
           <Image src={Click} alt="Click" />
         </div>
         <p className="text-[45px] text-white">Directivos</p>
-      </Link>
+      </div>
       <div
         className="cursor-pointer col-span-1 bg-yellow flex justify-between	flex-col rounded-[40px] p-[35px]"
-        onClick={() => router.push(`/members`)}
+        onClick={() => {
+          setDialog({ title: "Socios", open: true, roles: memberRoles });
+        }}
       >
         <div className="flex justify-between items-center">
           <p className="text-white text-[18px]">120 SOCIOS</p>

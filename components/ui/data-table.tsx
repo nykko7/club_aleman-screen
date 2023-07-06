@@ -60,7 +60,7 @@ export function DataTable<TData, TValue>({
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id}>
+              <TableRow key={headerGroup.id} className="border-y-neutral-300">
                 {headerGroup.headers.map((header) => {
                   return (
                     <TableHead key={header.id}>
@@ -80,6 +80,7 @@ export function DataTable<TData, TValue>({
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow
+                  className="border-y-neutral-300"
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
                 >
@@ -106,8 +107,9 @@ export function DataTable<TData, TValue>({
           </TableBody>
         </Table>
       </div>
-      <div className="flex items-center justify-end space-x-2 py-4 mt-auto">
+      <div className="flex items-center justify-center space-x-2 py-4 mt-auto">
         <Button
+          className="rounded-[10px]"
           variant="outline"
           size="sm"
           onClick={() => table.previousPage()}
@@ -116,6 +118,7 @@ export function DataTable<TData, TValue>({
           Anterior
         </Button>
         <Button
+          className="rounded-[10px]"
           variant="outline"
           size="sm"
           onClick={() => table.nextPage()}
