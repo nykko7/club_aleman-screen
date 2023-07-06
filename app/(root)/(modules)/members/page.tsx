@@ -14,20 +14,22 @@ const DirectivesPage = () => {
   const router = useRouter();
   const [openDialog, setOpenDialog] = useState(true);
 
-  const title = "Directivos";
-  const description = "5 directivos";
+  const title = "Socios";
+  const description = "120 Socios";
 
   const closeDialog = () => {
     setOpenDialog(false);
     router.push("/");
   };
 
-  const formattedDirectives: MemberColumn[] = _memberList.map((member) => ({
-    id: member.id,
-    name: `${member.firstName} ${member.lastName}`,
-    email: member.email || "",
-    role: member.role,
-  }));
+  const formattedDirectives: MemberColumn[] = _memberList
+    .map((member) => ({
+      id: member.id,
+      name: `${member.firstName} ${member.lastName}`,
+      email: member.email || "",
+      role: member.role,
+    }))
+    .filter((member) => member.role === "member");
 
   return (
     <>

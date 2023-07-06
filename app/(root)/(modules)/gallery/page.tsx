@@ -1,4 +1,4 @@
-import Carrousel from './components/carrousel'
+import Carrousel from "./components/carrousel";
 
 const GalleryPage = () => {
   return (

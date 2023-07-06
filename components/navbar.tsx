@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import Image from "next/image";
 import Logo from "@/public/assets/logo_german.png";
+import { useRouter } from "next/navigation";
 
 const getCurrentTime = () => {
   const date = new Date();
@@ -28,6 +29,8 @@ const Navbar = () => {
     ampm: "",
   });
 
+  const router = useRouter();
+
   // Llamada al método cada segundo
   useEffect(() => {
     const timer = setInterval(() => {
@@ -41,7 +44,10 @@ const Navbar = () => {
   }, []);
   return (
     <header className="flex justify-between mb-[50px]">
-      <div className="flex items-center gap-11">
+      <div
+        className="flex items-center gap-11 cursor-pointer"
+        onClick={() => router.push("/")}
+      >
         <Image src={Logo} alt="Logo Club Alemán" className="w-20" />
         <h1 className="text-2xl">
           <span className="font-bold mr-2">Club Alemán</span>
@@ -50,7 +56,7 @@ const Navbar = () => {
       </div>
       <div className="flex mt-4 gap-2">
         <p className="text-4xl font-medium">{currentTime.time}</p>
-        <p>HR</p>
+        <p>HRs</p>
       </div>
     </header>
   );

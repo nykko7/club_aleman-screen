@@ -1,27 +1,27 @@
-'use client'
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCards } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper/modules";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-cards';
+import "swiper/css";
+import "swiper/css/effect-cards";
 
-import './carrousel.css'
+import "./carrousel.css";
 
-import Image1 from '@/public/assets/image1.jpeg'
-import Image2 from '@/public/assets/image2.jpeg'
-import Image3 from '@/public/assets/image3.jpeg'
+import Image1 from "@/public/assets/image1.jpeg";
+import Image2 from "@/public/assets/image2.jpeg";
+import Image3 from "@/public/assets/image3.jpeg";
 
 export default function Carrousel() {
   return (
     <>
       <Swiper
-        effect={'cards'}
+        effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
         className="mySwiper"
@@ -31,16 +31,16 @@ export default function Carrousel() {
           disableOnInteraction: false,
         }}
       >
-        <SwiperSlide>
-            <Image src={Image1} alt="Imagen 1"/>
+        <SwiperSlide className="swiper-slide-gallery">
+          <Image src={Image1} alt="Imagen 1" />
         </SwiperSlide>
 
-        <SwiperSlide>
-            <Image src={Image2} alt="Imagen 1"/>
+        <SwiperSlide className="swiper-slide-gallery">
+          <Image src={Image2} alt="Imagen 1" />
         </SwiperSlide>
 
-        <SwiperSlide>
-            <Image src={Image3} alt="Imagen 1"/>
+        <SwiperSlide className="swiper-slide-gallery">
+          <Image src={Image3} alt="Imagen 1" />
         </SwiperSlide>
       </Swiper>
     </>
