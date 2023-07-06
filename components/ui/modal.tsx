@@ -33,9 +33,11 @@ export const Modal: React.FC<ModalProps> = ({
     <Dialog open={isOpen} onOpenChange={onChange}>
       <DialogContent>
         <DialogHeader>
+          {title && ( 
           <DialogTitle className="text-2xl font-semibold tracking-tight">
-            {title}
-          </DialogTitle>
+              {title}
+            </DialogTitle>
+          )}
         </DialogHeader>
         <div>{children}</div>
       </DialogContent>

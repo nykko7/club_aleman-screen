@@ -9,7 +9,7 @@ interface ModuleModalProps {
   onClose: () => void;
   loading: boolean;
   children: React.ReactNode;
-  title: string;
+  title?: string;
   description?: string;
 }
 
@@ -36,7 +36,7 @@ export const ModuleModal: React.FC<ModuleModalProps> = ({
       isOpen={isOpen}
       onClose={onClose}
     >
-      <div className="space-y-4 py-2 pb-4">
+      <div className="space-y-4 py-2 pb-4 max-w-md w-[500px]">
         {children}
         <div className=" space-x-2 flex items-center justify-end w-full">
           <Button disabled={loading} onClick={onClose}>

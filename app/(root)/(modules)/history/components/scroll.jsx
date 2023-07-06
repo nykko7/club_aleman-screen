@@ -22,7 +22,7 @@ export default function Scroll({ children }) {
         mousewheel={true}
         modules={[FreeMode, Scrollbar, Mousewheel]}
         style={{
-          width: "50%",
+          width: "60%",
           height: "60vh",
         }}
       >

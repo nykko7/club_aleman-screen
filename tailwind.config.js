@@ -66,7 +66,7 @@ module.exports = {
           DEFAULT: "#DEE2E6",
         },
         "almost-white": {
-          DEFAULT: "#E6E7E9",
+          DEFAULT: "#FAFBFF",
         },
       },
       borderRadius: {

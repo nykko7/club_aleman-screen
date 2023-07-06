@@ -1,3 +1,4 @@
+import { InactiveModal } from "@/components/inactive-modal";
 import Navbar from "@/components/navbar";
 
 export default function HomeLayout({
@@ -8,6 +9,7 @@ export default function HomeLayout({
   return (
     <div className="py-12 px-5 bg-almost-white h-full">
       <Navbar />
+      <InactiveModal />
       {children}
     </div>
   );

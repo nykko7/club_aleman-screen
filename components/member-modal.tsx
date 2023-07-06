@@ -49,7 +49,7 @@ export const MemberModal: React.FC<MemberModalProps> = ({
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <div className="space-y-4 py-2">
+      <div className="space-y-4 py-2  max-w-md w-[550px]">
         <div className="flex gap-5 items-center">
           <Image src={ImagenMiembro} alt={"Imagen de miembro"}></Image>
           <div className="flex flex-col gap-3">
