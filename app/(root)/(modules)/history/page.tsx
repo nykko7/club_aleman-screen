@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Scroll from "./components/scroll";
