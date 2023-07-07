@@ -1,3 +1,4 @@
+'use client'
 import Carrousel from "./components/carrousel";
 import ButtonBack from "@/components/ui/button-back";
 
