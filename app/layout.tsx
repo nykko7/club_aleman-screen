@@ -1,7 +1,6 @@
+import { InactiveModal } from "@/components/inactive-modal";
 import "./globals.css";
 import { Inter } from "next/font/google";
-
-import { ModuleModal } from "@/components/module-modal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={inter.className}>{children}</body>
+      <InactiveModal />
     </html>
   );
 }

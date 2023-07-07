@@ -5,7 +5,7 @@ import Image from "next/image";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, Autoplay } from "swiper/modules";
+import { EffectCards, Autoplay, Navigation } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -23,13 +23,14 @@ export default function Carrousel() {
       <Swiper
         effect={"cards"}
         grabCursor={true}
-        modules={[EffectCards, Autoplay]}
+        modules={[EffectCards, Autoplay, Navigation]}
         className="mySwiper"
         pagination={true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
         }}
+        loop={true}
       >
         <SwiperSlide className="swiper-slide-gallery">
           <Image src={Image1} alt="Imagen 1" />
@@ -43,6 +44,6 @@ export default function Carrousel() {
           <Image src={Image3} alt="Imagen 1" />
         </SwiperSlide>
       </Swiper>
-    </ div>
+    </div>
   );
 }

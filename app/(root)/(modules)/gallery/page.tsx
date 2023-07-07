@@ -1,5 +1,5 @@
 import Carrousel from "./components/carrousel";
-import ButtonBack from "@/components/button-back";
+import ButtonBack from "@/components/ui/button-back";
 
 const GalleryPage = () => {
   return (
